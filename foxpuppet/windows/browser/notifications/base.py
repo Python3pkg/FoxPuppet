@@ -7,10 +7,8 @@ from abc import ABCMeta
 from foxpuppet.region import Region
 
 
-class BaseNotification(Region):
+class BaseNotification(Region, metaclass=ABCMeta):
     """Abstract base class for any kind of notification."""
-
-    __metaclass__ = ABCMeta
 
     @staticmethod
     def create(window, root):
